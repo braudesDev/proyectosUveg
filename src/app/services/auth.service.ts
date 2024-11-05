@@ -1,0 +1,15 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthService {
+  logout() {
+    throw new Error('Method not implemented.');
+  }
+  onLogout() {
+    throw new Error('Method not implemented.');
+  }
+
+  constructor() { }
+}

@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "modules-routing"
+    }
+  },
+  "defaultProject": "modules-routing",
+  "cli": {
+    "analytics": "a11379bf-fd03-41a8-a603-cf76bfa4f4bf"
+  }
 }

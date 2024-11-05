@@ -1,0 +1,34 @@
+:host {
+    margin-bottom: 15px;
+
+    .card {
+        padding: 30px;
+        width: 200px;                 // Define un ancho fijo para cada tarjeta
+        display: flex;
+        flex-direction: column;       // Organiza el contenido verticalmente
+        align-items: center; 
+
+        .card-image-container {
+            max-height: 180px;
+            min-height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            overflow: hidden;
+    
+            img {
+                width: 100px;
+                height: auto;
+            }
+        }
+    
+        .card-body {
+            .card-text {
+                max-height: 120px;
+                min-height: 120px;
+                overflow: hidden;
+            }
+        }
+    }
+}

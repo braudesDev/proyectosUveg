@@ -1,0 +1,12 @@
+<div class="container pt-5">
+    <h2> Juegos populares </h2>
+    <div class="game-container">
+        <app-game-card
+            *ngFor="let game of lastGames"
+            [game]="game"
+            (buyEvent)="onBuyEvent($event)"
+            (notInterestededEvent)="onNotInterestedEvent($event)" 
+        ></app-game-card>
+    </div>
+    
+</div>

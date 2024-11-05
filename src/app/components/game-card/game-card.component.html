@@ -1,0 +1,11 @@
+<div class="card" style="width: 22rem;">
+    <div class="game-image-container">
+        <img class="game-img-top" [src]="game ? game.image : '../../../assets/images/games/mario64.webp'" alt="Imagen no disponible">
+    </div>
+    <div class="card-body">
+        <h5 class="card-title"> {{ game ? game.title : 'Sin nombre' }} </h5>
+        <p class="card-text"> {{ (game ? game.description : 'Sin descripción') | slice:1:150 }} ... </p>
+        <button href="#" class="btn btn-primary" (click)="OnBuy">Comprar</button>
+        <button href="#" class="btn btn-secondary ml-3" (click)="OnNotInterested"> No me interesa </button>
+    </div>
+</div>

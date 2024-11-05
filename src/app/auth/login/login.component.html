@@ -1,0 +1,37 @@
+<div class="text-center login-container">
+    <div class="form-signin" [formGroup]="loginForm">
+      <img class="mb-4" src="./../../../assets/images/login.png" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Bienvenido</h1>
+  
+      <label for="inputEmail" class="sr-only">Email</label>
+      <input 
+        type="email" 
+        id="inputEmail" 
+        class="form-control" 
+        placeholder="Ingresa tu email" 
+        required autofocus 
+        formControlName="email" 
+        (keypress)="onKeyPress($event)">
+      <p style="color: red;" *ngIf="loginForm.get('email').touched && loginForm.get('email').invalid">
+        Email requerido
+      </p>
+  
+      <label for="inputPassword" class="sr-only">Contraseña</label>
+      <input 
+        type="password" 
+        id="inputPassword" 
+        class="form-control" 
+        placeholder="Ingresa tu contrase&ntilde;" 
+        required 
+        formControlName="password">
+      <p style="color: red;" *ngIf="loginForm.get('password').touched && loginForm.get('password').invalid">
+        Contraseña requerida
+      </p>
+  
+  
+      <button class="btn btn-outline-primary btn-block" (click)="onLogin()">Iniciar sesión</button>
+      <button class="btn btn-outline-secondary btn-block" (click)="onSignIn()">Registrarse</button>
+      <p class="mt-5 mb-3 text-muted"></p>
+    </div>
+  </div>
+  
