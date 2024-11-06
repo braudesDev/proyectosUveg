@@ -1,0 +1,18 @@
+<div class="container pt-5">
+  <h2>Más Descargados</h2>
+  <div class="game-container">
+    <div class="game-card" *ngFor="let game of masDescargados">
+      <img [src]="game.image" alt="{{ game.title }}" class="game-image">
+      <div class="game-details">
+        <h5 class="game-title">{{ game.title }}</h5>
+        <p class="game-description">{{ game.description }}</p>
+        <p class="release-date">Fecha de lanzamiento: {{ game.releaseDate | date: 'longDate' }}</p>
+        <p class="rating">Calificación: {{ game.rating }} ★</p>
+        <div class="game-buttons">
+          <button class="btn btn-primary" (click)="onBuyEvent(game)">Comprar</button>
+          <button class="btn btn-secondary" (click)="onNotInterestedEvent(game.title)">No me interesa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

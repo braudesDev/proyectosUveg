@@ -1,30 +1,41 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand">Juegos B</a>
-    <button class="navbar-toggler" 
-            type="button" 
-            data-toggle="collapse" 
-            data-target="#navbarSupportedContent" 
-            aria-controls="navbarSupportedContent" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item" [routerLink]="'/module-home/home/dashboard'" [routerLinkActive]="'active'">
-          <a class="nav-link" >Mas populares <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item" [routerLink]="'/module-home/home/about'" [routerLinkActive]="'active'">
-          <a class="nav-link" >Mas descargados</a>
+  <a class="navbar-brand d-flex align-items-center">
+      <img src="/assets/images/mando.png" alt="Logo" class="logo" /> Juegos B
+  </a>
+  <button class="navbar-toggler" 
+          type="button" 
+          data-toggle="collapse" 
+          data-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" [routerLink]="'/module-home/home/dashboard'" [routerLinkActive]="'active'">
+        <a class="nav-link">Mas populares</a>
+      </li>
+      <li class="nav-item" [routerLink]="'/module-home/home/mas-descargados'" [routerLinkActive]="'active'">
+        <a class="nav-link">Mas descargados</a>
+      </li>
+      <li class="nav-item" [routerLink]="'/proximamente'" [routerLinkActive]="'active'">
+        <a class="nav-link">Próximamente</a>
+      </li>
+      <li class="nav-item" [routerLink]="'/agregar'" [routerLinkActive]="'active'">
+        <a class="nav-link">Agregar</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-juego">
+        <li class="nav-item" (click)="onLogout()">
+          <a class="nav-link">
+            <img src="/assets/images/salida.png" alt="logo salir" class="salir" /> Salir
+
+          </a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <ul class="navbar-nav mr-juego">
-          <li class="nav-item" (click)="onLogout()">
-            <a class="nav-link" >Salir</a>
-          </li>
-        </ul>
-      </form>
-    </div>
-  </nav>
+    </form>
+  </div>
+</nav>

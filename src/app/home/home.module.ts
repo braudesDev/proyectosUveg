@@ -5,12 +5,12 @@ import { HomeRoutingModule } from './home-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ComponentsModule } from '../components/components.module';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
+import { MasDescargadosComponent } from './mas-descargados/mas-descargados.component';
 import { RouterModule } from '@angular/router';
 
 
 @NgModule({
-  declarations: [DashboardComponent, HomeComponent, AboutComponent],
+  declarations: [DashboardComponent, HomeComponent, MasDescargadosComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

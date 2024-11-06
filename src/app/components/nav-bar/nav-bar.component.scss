@@ -5,3 +5,25 @@
     width: 100%;
     z-index: 10;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        width: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
+        height: auto;
+        margin-right: 8px; /* Espacio entre la imagen y el texto */
+    }
+
+    .nav-link {
+        margin-right: 15px; /* Espacio entre los elementos del menú */
+    }
+
+    .salir {
+        width: 20px; /* Ajusta el tamaño de la imagen según sea necesario */
+        height: auto;
+        margin-right: 8px; /* Espacio entre la imagen y el texto */
+    }
+}
