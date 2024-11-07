@@ -4,26 +4,39 @@
     left: 0;
     width: 100%;
     z-index: 10;
-}
-
-.navbar {
+  }
+  
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    padding: 0.5rem 1rem;
+  
     .logo {
-        width: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
-        height: auto;
-        margin-right: 8px; /* Espacio entre la imagen y el texto */
+      width: 40px; /* Ajusta el tamaño de la imagen según sea necesario */
+      height: auto;
+      margin-right: 8px; /* Espacio entre la imagen y el texto */
     }
-
+  
     .nav-link {
-        margin-right: 15px; /* Espacio entre los elementos del menú */
+      margin-right: 15px; /* Espacio entre los elementos del menú */
+      font-weight: 500;
+      color: #343a40;
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: #aa54db; /* Color al pasar el cursor */
+      }
     }
-
+  
+    .active .nav-link {
+      color: #007bff; /* Color de enlace activo */
+    }
+  
     .salir {
-        width: 20px; /* Ajusta el tamaño de la imagen según sea necesario */
-        height: auto;
-        margin-right: 8px; /* Espacio entre la imagen y el texto */
+      width: 20px; /* Ajusta el tamaño de la imagen según sea necesario */
+      height: auto;
+      margin-right: 5px; /* Espacio entre la imagen y el texto */
     }
-}
+  }
+  

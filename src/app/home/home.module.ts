@@ -7,15 +7,18 @@ import { ComponentsModule } from '../components/components.module';
 import { HomeComponent } from './home/home.component';
 import { MasDescargadosComponent } from './mas-descargados/mas-descargados.component';
 import { RouterModule } from '@angular/router';
+import { AgregarVideojuegoComponent } from './agregar-videojuego/agregar-videojuego.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [DashboardComponent, HomeComponent, MasDescargadosComponent],
+  declarations: [DashboardComponent, HomeComponent, MasDescargadosComponent, AgregarVideojuegoComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
     ComponentsModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ]
 })
 export class HomeModule { }

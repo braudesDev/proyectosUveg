@@ -9,8 +9,8 @@
           <p class="release-date">Fecha de lanzamiento: {{ game.releaseDate | date: 'longDate' }}</p>
           <p class="rating">Calificación: {{ game.rating }} ★</p>
           <div class="game-buttons">
-            <button class="btn btn-primary" (click)="onBuyEvent(game)">Comprar</button>
-            <button class="btn btn-secondary" (click)="onNotInterestedEvent(game.title)">No me interesa</button>
+            <button class="btn btn-primary" (click)="onBuyEvent(game)">Adquirir</button>
+            <button class="btn btn-secondary" (click)="onNotInterestedEvent(game.title)">No estoy interesado</button>
           </div>
         </div>
       </div>

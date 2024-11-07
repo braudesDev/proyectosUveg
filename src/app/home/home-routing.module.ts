@@ -3,16 +3,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { MasDescargadosComponent } from './mas-descargados/mas-descargados.component';
+import { AgregarVideojuegoComponent } from './agregar-videojuego/agregar-videojuego.component';
 import { HasSessionGuard } from '../guards/has-session/has-session.guard';
 
 const routesChildren: Routes = [
   {path: 'dashboard', component: DashboardComponent, canActivate: [HasSessionGuard]},
   {path: 'mas-descargados', component: MasDescargadosComponent, canActivate: [HasSessionGuard]},
+  {path: 'agregar-videojuego', component: AgregarVideojuegoComponent, canActivate: [HasSessionGuard]},
   {path: '**', redirectTo: 'dashboard', pathMatch: 'full'},
 ];
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent, children: routesChildren, canActivate: [HasSessionGuard]},
+  {path: 'home', component: HomeComponent, children: routesChildren },
   {path: '**', redirectTo: 'home', pathMatch: 'full'},
 ];
 

@@ -4,7 +4,9 @@ import { HasSessionGuard } from './guards/has-session/has-session.guard';
 
 const routes: Routes = [
   {path: 'module-auth', loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule)},
-  {path: 'module-home', loadChildren: () => import('./home/home.module').then((m) => m.HomeModule)},
+  {path: 'module-home', loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+    canActivate:[HasSessionGuard]
+  },
   {path: '**', pathMatch: 'full', redirectTo: 'module-auth'}
 ];
 
